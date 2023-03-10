@@ -1,18 +1,14 @@
 import { StyleSheet, Text, View,TextInput,TouchableOpacity } from 'react-native'
-import React,{useState} from 'react'
-import { useDispatch } from 'react-redux'
+import React,{useEffect, useState} from 'react'
+import { useDispatch,useSelector } from 'react-redux'
 import {UpdateTodo} from '../feature/Todos/TodoSlice' 
 import { useNavigation } from '@react-navigation/native';
 
 const UpdateTodoComponent = ({route}) => {
     const navigation = useNavigation();
     const [editTodo , setEditTodo] = useState(route.params.name)
+    const [editTodoId , setEditTodoId] = useState(route.params.id)
     const dispatch = useDispatch()
-
-    // const updateTodo =()=>{
-    //     dispatch(UpdateTodo)
-    // }
-
   return (
     <View>
        <View style={styles.todoinputView}>
@@ -25,7 +21,7 @@ const UpdateTodoComponent = ({route}) => {
         <View style= {styles.addTodoView}>
         <TouchableOpacity style={styles.addTodoButton}
         onPress={()=>{
-            dispatch(UpdateTodo({ id: 1, name: editTodo})),
+            dispatch(UpdateTodo({id :editTodoId,  name: editTodo})),
         navigation.navigate('todoScreen'); 
     }}
         >

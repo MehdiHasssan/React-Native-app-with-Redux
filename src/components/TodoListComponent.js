@@ -39,7 +39,8 @@ const TodoListComponent = () => {
                 <TouchableOpacity 
                 style={styles.button}
                 onPress={()=>navigation.navigate('updateTodo',{
-                    name:item.name
+                    name:item.name,
+                    id : item.id
                 })}
                 >
                   <Icon name = "edit" size={23} color="red" right={12} />
