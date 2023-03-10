@@ -8,6 +8,7 @@ import { AddTodo } from '../feature/Todos/TodoSlice'
 const TodoScreen = ({navigation}) => {
     const[addTodo, setAddTodo] = useState('')
 
+
     const handleAddTodo =()=>{
         if(addTodo.trim().length === 0){
             alert('Please enter something')
@@ -38,6 +39,8 @@ const TodoScreen = ({navigation}) => {
               />
         </View>
         {/* Todo TextInput================ */}
+
+
 
         {/* Add TODO button================ */}
         <View style= {styles.addTodoView}>
