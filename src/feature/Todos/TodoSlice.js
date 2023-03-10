@@ -7,7 +7,7 @@ export const TodoSlice = createSlice({
     AddTodo: (state, action) => {
       const AddNewTodo = {
         id: action.payload.id,
-        name: action.payload.todo,
+        name: action.payload.todoName,
       };
       state.push(AddNewTodo);
       console.log(AddNewTodo,"hello")

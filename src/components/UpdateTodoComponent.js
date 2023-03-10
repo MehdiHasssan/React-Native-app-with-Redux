@@ -23,7 +23,7 @@ const UpdateTodoComponent = ({route}) => {
         onPress={()=>{
             dispatch(UpdateTodo({id :editTodoId,  name: editTodo})),
         navigation.navigate('todoScreen'); 
-    }}
+    }} 
         >
             <Text style={styles.addTodoText}>
                 Update

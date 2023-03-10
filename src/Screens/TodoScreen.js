@@ -17,7 +17,7 @@ const TodoScreen = ({navigation}) => {
          }
          dispatch(
             AddTodo({
-                todo:addTodo,
+                todoName:addTodo,
                 id:Math.floor(Math.random() * 100) + 1
             })
          )
