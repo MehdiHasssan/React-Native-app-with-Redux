@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     CounterbuttonView:{
         justifyContent:'center',
         alignItems:'center',
-        top:473,
+        top:54,
         // flex:1
     },
     Counterbutton:{

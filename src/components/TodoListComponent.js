@@ -53,14 +53,14 @@ const TodoListComponent = () => {
     
 
   return (
+    
     <View style={styles.FlatList}>
       <FlatList
+      nestedScrollEnabled
       data={todoData}
       keyExtractor={(item)=>item.title}
       renderItem={renderItem}
       />
-    
-
     </View>
     
   )
@@ -81,7 +81,6 @@ const styles = StyleSheet.create({
         color:'#000',
         fontWeight:'bold',
         fontSize:18,
-        // paddingVertical:8,
         marginHorizontal:12
         
     },
@@ -93,5 +92,6 @@ const styles = StyleSheet.create({
     },
   FlatList:{
     top:32,
+  
   }
 })
